@@ -1,4 +1,9 @@
+@import '@dayflow/core/dist/styles.components.css';
 @import "tailwindcss";
+@plugin './hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: #ffffff;
@@ -23,4 +28,51 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.df-calendar-container{
+  height: 100vh !important;
+}
+
+.df-month-day-cell-content{
+  overflow-y: scroll !important;
+}
+
+.df-shrink-0{
+  height: 22.5px !important;
+  min-height: 20px !important;
+}
+
+.df-content-slot {
+  align-content: center !important; 
+  min-height: 20px !important;
+  width: inherit !important;
+}
+
+.df-month-segment-event{
+  display: flex !important;
+  align-items: center !important;
+  min-height: 20px !important;
+}
+
+.df-event-month-title{
+  font-size: 12px !important;
+  font-weight: 550 !important;
+  letter-spacing: 0.6px !important;
+}
+
+.df-month-segment-event-time{
+  font-size: 12px !important;
+}
+
+.df-month-segment-event-tail-time{
+  font-size: 12px !important;
+}
+
+.df-event-title{
+  font-size: 12px !important;
+}
+
+.df-event-time{
+  font-size: 12px !important;
 }
